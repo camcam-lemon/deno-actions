@@ -4,6 +4,7 @@ description: "Install or restore dependencies"
 runs:
   using: "composite"
   steps:
+    - uses: denoland/setup-deno@v1
     - uses: actions/setup-node@v3
       with:
         node-version: 18
