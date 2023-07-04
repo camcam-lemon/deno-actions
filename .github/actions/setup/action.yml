@@ -16,7 +16,7 @@ runs:
     - name: Install Dependencies
       run: yarn install
       shell: bash
-    - uses: denoland/setup-deno@v1
     - name: Install Deno bmp
+    - uses: denoland/setup-deno@v1
       run: deno install --allow-read=. --allow-write=. --allow-run=git -qf https://deno.land/x/bmp@v0.2.0/cli.ts
       shell: bash
