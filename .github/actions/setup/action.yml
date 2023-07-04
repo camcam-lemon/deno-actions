@@ -8,9 +8,6 @@ runs:
       with:
         node-version: 18
     - uses: denoland/setup-deno@v1
-    # - name: Setup Deno
-    #   run: echo "/home/runner/.deno/bin" >> $GITHUB_PATH
-    #   shell: bash
     - name: Display version of Node.js, npm, Yarn
       run: |
         node -v
@@ -20,6 +17,6 @@ runs:
     - name: Install Dependencies
       run: yarn install
       shell: bash
-    - name: Setup Deno
+    - name: Install Deno bmp
       run: deno install --allow-read=. --allow-write=. --allow-run=git -qf https://deno.land/x/bmp@v0.2.0/cli.ts
       shell: bash
