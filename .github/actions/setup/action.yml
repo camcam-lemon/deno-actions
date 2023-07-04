@@ -4,7 +4,6 @@ description: "Install or restore dependencies"
 runs:
   using: "composite"
   steps:
-    - uses: denoland/setup-deno@v1
     - uses: actions/setup-node@v3
       with:
         node-version: 18
@@ -18,7 +17,8 @@ runs:
       run: yarn install
       shell: bash
     - name: Setup Deno
+    - uses: denoland/setup-deno@v1
       run: |
-        deno install --allow-read=. --allow-write=. --allow-run=git -qf https://deno.land/x/bmp@v0.2.0/cli.ts
         echo "/home/runner/.deno/bin" >> $GITHUB_PATH
+        deno install --allow-read=. --allow-write=. --allow-run=git -qf https://deno.land/x/bmp@v0.2.0/cli.ts
       shell: bash
