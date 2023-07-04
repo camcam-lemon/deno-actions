@@ -8,9 +8,9 @@ runs:
       with:
         node-version: 18
     - uses: denoland/setup-deno@v1
-    - name: Setup Deno
-      run: echo "/home/runner/.deno/bin" >> $GITHUB_PATH
-      shell: bash
+    # - name: Setup Deno
+    #   run: echo "/home/runner/.deno/bin" >> $GITHUB_PATH
+    #   shell: bash
     - name: Display version of Node.js, npm, Yarn
       run: |
         node -v
